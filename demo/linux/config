@@ -1,0 +1,4 @@
+#!/bin/bash
+ln -s libopus.so.0 libopus.so
+g++ -o demo demo.cpp -std=c++11 -pthread -I ./ -L. -ldl -lopus -lrealTimeUnity -lssl -lcrypto
+export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH
